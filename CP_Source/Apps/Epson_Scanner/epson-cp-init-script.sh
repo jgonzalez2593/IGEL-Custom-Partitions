@@ -56,4 +56,10 @@ esac
 
 echo "Finished" | $LOGGER
 
+# Restart usb access policy service needed 
+# so that Epson scanner is recognized by OS
+# after the CP script runs.
+
+systemctl restart igel-usbaccess.service
+
 exit 0
